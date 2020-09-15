@@ -50,10 +50,59 @@ namespace Task1
             return inRange;
         }
 
-        private int DistanceTo()
+        private int DistanceTo(int enemyX, int enemyY, int heroX, int heroY)
         {
             int totalDistance; 
-            //
+            if (enemyX > heroX)
+	        { 
+             totalDistance =+ (enemyX - heroX);
+	        }else
+	        {
+             totalDistance =+ (heroX - enemyX);
+	        }
+            if (true)
+	        {
+             totalDistance =+ (enemyY - heroY);
+	        }else
+	        {
+             totalDistance =+ (heroY - enemyY);
+	        }
+        }
+
+        public void Move()
+        {
+            switch (movement)
+	        {
+		     case movement.noMovemnet:
+               break;
+             case movement.Up:
+                    if (Obstacale.isBorder())
+	                {
+                    //re roll
+	                }else
+	                {
+                     x =+ 1;
+	                }
+               break;
+             case movement.Down:
+                    if (Obstacale.isBorder())
+	                {
+                        x =-1;
+	                }
+               break;
+             case movement.Left:
+                    if (Obstacale.isBorder)
+	                {
+                        y=-1;
+	                }
+               break;
+             case movement.Right:
+                    if (Obstacale.isBorder)
+	                {
+                        y=+1;
+	                }
+               break;
+	        }
         }
 
     }

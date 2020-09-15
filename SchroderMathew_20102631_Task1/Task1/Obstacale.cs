@@ -6,13 +6,13 @@ namespace Task1
 {
     class Obstacale : Tile
     {
-        public bool border;
+        public bool border {get ; set;}
 
-        public Obstacale(int _x, int _y)
+        // constuctor 
+        public Obstacale(bool _border) : base(x,y)
         {
-            this.x = _x;
-            this.y = _y;
-        }
+            border = _border;
+        } 
 
         public bool isBorder(int xMap, int yMap)
         {
